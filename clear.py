@@ -17,6 +17,9 @@ async def clear(ctx, amount : int):
     await asyncio.sleep(5)
     await ctx.channel.purge( limit = 1)
 
+    
+    
+    
 #Обработка ошибки
 @clear.error
 @commands.cooldown(1, 10, commands.BucketType.user) # кол-во время через которые можно снова написать данную команду и она будет работать 
@@ -33,4 +36,6 @@ async def clear_error(ctx, error):
         await asyncio.sleep(15)
         await ctx.channel.purge( limit = 1 )
 
+        
+        
 """BY EN0T1K421"""
