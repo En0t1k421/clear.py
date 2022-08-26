@@ -3,8 +3,7 @@ from discord.ext import commands, tasks
 import asyncio
 import datetime
 
-
-#clear коипндп
+#сама команда
 @client.command(pass_context = True)
 @commands.has_permissions( administrator = True )
 @commands.cooldown(1, 10, commands.BucketType.user)
