@@ -17,10 +17,6 @@ async def clear(ctx, amount : int):
     await asyncio.sleep(5)
     await ctx.channel.purge( limit = 1)
 
-
-
-
-
 #Обработка ошибки
 @clear.error
 @commands.cooldown(1, 10, commands.BucketType.user) # кол-во время через которые можно снова написать данную команду и она будет работать 
@@ -36,7 +32,5 @@ async def clear_error(ctx, error):
         await ctx.send(embed = discord.Embed(title = f"Ошибка!", description = f"{ctx.author.name}, Погоди, время чтобы вновь использовать эту команду ещё не прошло {error.retry_after:.2f}s." , color = ERROR))
         await asyncio.sleep(15)
         await ctx.channel.purge( limit = 1 )
-
-
 
 """BY EN0T1K421"""
